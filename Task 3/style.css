@@ -1,0 +1,51 @@
+body {
+  font-family: Georgia, serif;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  background-color: white;
+  color: #7a4e4e;
+}
+
+.logo {
+  width: 120px;
+  margin: 20px;
+  float: left;
+}
+
+.title {
+  font-size: 30px;
+  margin-top: 40px;
+  color: #7a4e4e;
+  text-decoration: underline;
+  font-weight: bold;
+}
+
+.description {
+  font-size: 20px;
+  width: 80%;
+  margin: 30px auto;
+  line-height: 1.6;
+}
+
+.image-container img {
+  width: 70%;
+  border-radius: 6px;
+  margin-top: 20px;
+}
+
+footer {
+  width: 100%;
+  padding: 40px;
+  text-align: right;
+}
+
+.contact {
+  color: #c97f3a;
+  text-decoration: none;
+  font-size: 16px;
+}
+
+.contact:hover {
+  text-decoration: underline;
+}
