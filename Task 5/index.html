@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Introduction to HTML</title>
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Merriweather:wght@700&family=Inter:wght@300;600&display=swap"
+      rel="stylesheet"
+    />
+
+    <style>
+      :root {
+        --bg: #f6f8fb;
+        --card: #ffffff;
+        --muted: #5b6370;
+        --accent: #0f62fe;
+        --heading: #0b1220;
+        --border: rgba(11, 18, 32, 0.06);
+        --shadow: 0 8px 24px rgba(11, 18, 32, 0.06);
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+      html,
+      body {
+        height: 100%;
+        margin: 0;
+        background: var(--bg);
+        font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto,
+          "Helvetica Neue", Arial;
+        color: var(--heading);
+        -webkit-font-smoothing: antialiased;
+      }
+      .page {
+        max-width: 1100px;
+        margin: 36px auto;
+        padding: 28px;
+      }
+
+      header {
+        text-align: center;
+        margin-bottom: 18px;
+      }
+      h1 {
+        font-family: Merriweather, serif;
+        font-size: 30px;
+        margin: 0 0 6px;
+        color: var(--heading);
+      }
+      /* keep original 'Terms' heading style but nicer */
+      .lead {
+        color: var(--muted);
+        font-size: 15px;
+        margin: 0 0 18px;
+      }
+
+      /* two-column layout */
+      .layout {
+        display: grid;
+        grid-template-columns: 320px 1fr;
+        gap: 28px;
+        align-items: start;
+      }
+
+      /* left column (terms) */
+      .terms {
+        background: var(--card);
+        border: 1px solid var(--border);
+        box-shadow: var(--shadow);
+        padding: 20px;
+        border-radius: 10px;
+      }
+      .terms h2 {
+        margin: 0 0 10px 0;
+        font-size: 18px;
+        color: var(--heading);
+        font-weight: 700;
+      }
+      dl {
+        margin: 0;
+      }
+      dt {
+        font-weight: 700;
+        margin-top: 14px;
+        font-size: 15px;
+        color: #111827;
+      }
+      dd {
+        margin: 6px 0 0 0;
+        color: var(--muted);
+        line-height: 1.6;
+        font-size: 14px;
+      }
+
+      /* right column (content) */
+      .content {
+        background: var(--card);
+        border: 1px solid var(--border);
+        box-shadow: var(--shadow);
+        padding: 22px;
+        border-radius: 10px;
+      }
+      h3.section {
+        font-family: Merriweather, serif;
+        font-size: 20px;
+        margin: 0 0 12px 0;
+      }
+      p {
+        color: var(--muted);
+        line-height: 1.7;
+        margin: 0 0 16px 0;
+        font-size: 15px;
+      }
+
+      /* table styling */
+      .table-wrap {
+        overflow: auto;
+        margin-top: 6px;
+      }
+      table {
+        width: 100%;
+        border-collapse: collapse;
+        font-size: 15px;
+      }
+      thead th {
+        padding: 10px 12px;
+        text-align: left;
+        background: linear-gradient(180deg, var(--accent), #0753c6);
+        color: #fff;
+        font-weight: 600;
+        border-radius: 6px;
+      }
+      tbody td {
+        padding: 12px;
+        border-bottom: 1px solid var(--border);
+        color: #111827;
+      }
+      tbody tr:nth-child(even) td {
+        background: rgba(11, 18, 32, 0.02);
+      }
+
+      /* smaller screens */
+      @media (max-width: 900px) {
+        .layout {
+          grid-template-columns: 1fr;
+        }
+        .terms {
+          order: 2;
+        }
+        .content {
+          order: 1;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="page">
+      <header>
+        <h1>Introduction to HTML</h1>
+      </header>
+
+      <div class="layout">
+        <aside class="terms" aria-labelledby="terms-title">
+          <h2 id="terms-title">Terms</h2>
+
+          <dl>
+            <dt>Web Pages</dt>
+            <dd>Documents that are written in a language called HTML</dd>
+
+            <dt>HTML</dt>
+            <dd>Stands for HyperText Markup Language</dd>
+
+            <dt>HTML tags</dt>
+            <dd>
+              Special codes that tell the web browser how to display the HTML
+              document
+            </dd>
+
+            <dt>Web Browser</dt>
+            <dd>
+              An application that can interrupt HTML and display the document in
+              the format according to markup tags example: Firefox, Google
+              chrome..
+            </dd>
+          </dl>
+        </aside>
+
+        <main class="content" role="main">
+          <!-- preserving original content and order, no extra text added -->
+          <h3 class="section"></h3>
+
+          <p style="margin-bottom: 20px">
+            <!-- left intentionally blank to preserve original layout impression -->
+          </p>
+
+          <div class="table-wrap" aria-hidden="false">
+            <table>
+              <thead>
+                <tr>
+                  <th style="width: 60%">year</th>
+                  <th style="width: 40%">Version</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>1991</td>
+                  <td>HTML</td>
+                </tr>
+                <tr>
+                  <td>1995</td>
+                  <td>HTML 2.0</td>
+                </tr>
+                <tr>
+                  <td>2012</td>
+                  <td>HTML 5</td>
+                </tr>
+                <tr>
+                  <td>2017</td>
+                  <td>HTML 5.2</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </main>
+      </div>
+    </div>
+  </body>
+</html>
